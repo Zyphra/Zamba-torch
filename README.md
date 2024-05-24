@@ -1,5 +1,7 @@
 # Zamba Inference in PyTorch
 
+Note: Under construction! Use as a reference, and load the model using our [HuggingFace Transformers fork](https://github.com/huggingface/transformers/pull/30950).
+
 Pure-torch inference code for the Zamba-7B model (https://huggingface.co/Zyphra)
 
 # Installation
