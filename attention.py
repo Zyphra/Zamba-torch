@@ -19,7 +19,7 @@ class CausalSelfAttention(nn.Module):
         self.dpa = te.pytorch.DotProductAttention(num_attention_heads=16, kv_channels =90, attention_dropout=0.0, layer_number=layer_number, attn_mask_type="padding")
                 
     def forward(self, hidden_states, attention_mask, key_value_states=None, inference_params=None, rotary_pos_emb=None):
-            B, T, C = hidden_states.size()
+            
             qkv_out = self.linear_qkv(hidden_states)
             qkv_out = qkv_out.permute(1,0,2)
             # TODO FIX
